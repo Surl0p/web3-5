@@ -1,39 +1,95 @@
-.weather-container {
-    max-width: 480px;
+.weather-page {
     width: 100%;
+}
+
+.weather-widgets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     margin: 0 auto;
+    max-width: 520px;
 }
 
-.weather-card {
-    background: rgba(255, 255, 255, 0.08);
-    padding: 2rem;
-    border-radius: 16px;
+.card_title {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.card_date {
+    color: var(--text-muted);
+    margin: 0 0 1rem;
+}
+
+.card_search {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.card_input {
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--panel-strong);
+    color: var(--text);
+    font-size: 1rem;
+}
+
+.card_btn {
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: #0b1021;
+    padding: 0.85rem 1rem;
+    box-shadow: 0 15px 30px rgba(96, 165, 250, 0.35);
+}
+
+.card_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 1rem;
+}
+
+.card_title--city {
+    margin: 0;
+}
+
+.card_title--temp {
+    margin: 0;
+    color: var(--text-muted);
+}
+
+.card_weather-icon {
+    width: 120px;
+    height: 120px;
+}
+
+.weather-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+.detail-item {
+    background: var(--panel-strong);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.75rem;
     text-align: center;
-    backdrop-filter: blur(6px);
 }
 
-.weather-input {
-    width: 80%;
-    padding: 0.7rem;
-    border-radius: 8px;
-    border: none;
-    margin-right: 0.5rem;
-}
+@media (max-width: 540px) {
+    .card_search {
+        grid-template-columns: 1fr;
+    }
 
-.weather-search-btn {
-    padding: 0.7rem 1rem;
-    border-radius: 8px;
-    border: none;
-    background: #3b82f6;
-    color: white;
-}
-
-.weather-icon {
-    width: 100px;
-    margin-top: 1rem;
-}
-
-.weather-info {
-    margin-top: 1rem;
-    font-size: 1.2rem;
+    .card_btn {
+        width: 100%;
+    }
 }
