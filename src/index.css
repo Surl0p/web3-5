@@ -1,13 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
 :root {
-    --background-color: #050816;
-    --text-color: #ffffff;
-    --text-secondary: #9ca3af;
+    --bg: radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.25), transparent 35%),
+        radial-gradient(circle at 80% 0%, rgba(16, 185, 129, 0.2), transparent 30%),
+        #0d111f;
+    --panel: rgba(255, 255, 255, 0.06);
+    --panel-strong: rgba(255, 255, 255, 0.1);
+    --text: #e5e7eb;
+    --text-muted: #9ca3af;
+    --accent: #60a5fa;
+    --accent-2: #a855f7;
+    --border: rgba(255, 255, 255, 0.08);
+    --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
 }
 
 [data-theme="light"] {
-    --background-color: #f3f4f6;
-    --text-color: #111827;
-    --text-secondary: #4b5563;
+    --bg: #f5f7fb;
+    --panel: rgba(255, 255, 255, 0.95);
+    --panel-strong: #ffffff;
+    --text: #0f172a;
+    --text-muted: #475569;
+    --accent: #2563eb;
+    --accent-2: #a855f7;
+    --border: rgba(15, 23, 42, 0.08);
+    --shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 *,
@@ -18,23 +34,35 @@
 
 body {
     margin: 0;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: var(--background-color);
-    color: var(--text-color);
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
 }
 
 button {
     cursor: pointer;
+    font-family: inherit;
 }
 
-.app-main {
-    min-height: calc(100vh - 160px);
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.25rem;
 }
 
-/* Дальше можешь переносить стили из старого проекта */
+.app-main {
+    min-height: calc(100vh - 180px);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
