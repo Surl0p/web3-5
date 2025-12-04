@@ -1,5 +1,9 @@
 .movies-page {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 220px);
 }
 
 .movies-wrapper {
