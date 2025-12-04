@@ -1,0 +1,46 @@
+.movies-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.movie-search {
+    margin-bottom: 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.movie-input {
+    padding: 0.7rem;
+    width: 70%;
+    border-radius: 8px;
+    border: none;
+}
+
+.movie-btn {
+    padding: 0.7rem 1rem;
+    background: #10b981;
+    border: none;
+    font-size: 1rem;
+    border-radius: 8px;
+    color: white;
+}
+
+.movie-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 1.5rem;
+    backdrop-filter: blur(6px);
+    display: flex;
+    gap: 1.2rem;
+}
+
+.movie-poster {
+    width: 160px;
+    border-radius: 12px;
+}
+
+.movie-details {
+    text-align: left;
+}

@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Weather from "./components/Weather/Weather";
+import Movies from "./components/Movies/Movies";
+import Currency from "./components/Currency/Currency";
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+import "./App.css";
+
+// Тип страницы — экспортируем, чтобы использовать в других компонентах
+export type Page = "home" | "weather" | "movies" | "currency";
+
+export default function App() {
+    const [page, setPage] = useState<Page>("home");
+    const [darkTheme, setDarkTheme] = useState<boolean>(true);
+
+    // переключение страницы
+    const handleChangePage = (nextPage: Page) => {
+        setPage(nextPage);
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
+    // переключение темы
+    const toggleTheme = () => {
+        setDarkTheme((prev) => !prev);
+
+        document.documentElement.setAttribute(
+            "data-theme",
+            !darkTheme ? "dark" : "light"
+        );
+    };
+
+    return (
+        <div className={`app ${darkTheme ? "theme-dark" : "theme-light"}`}>
+            {/* Шапка */}
+            <Header
+                currentPage={page}
+                onChangePage={handleChangePage}
+                darkTheme={darkTheme}
+                onToggleTheme={toggleTheme}
+            />
+
+            {/* Основной контейнер */}
+            <main className="app-main">
+                {page === "home" && <Home onChangePage={handleChangePage} />}
+                {page === "weather" && <Weather />}
+                {page === "movies" && <Movies />}
+                {page === "currency" && <Currency />}
+            </main>
+
+            {/* Подвал */}
+            <Footer onChangePage={handleChangePage} />
+        </div>
+    );
 }
-
-export default App

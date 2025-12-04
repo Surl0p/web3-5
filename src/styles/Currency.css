@@ -1,0 +1,42 @@
+.currency-container {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.currency-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.8rem;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+}
+
+.currency-input {
+    width: 60%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 1rem;
+}
+
+.currency-select {
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    margin: 0.5rem;
+}
+
+.currency-btn {
+    width: 100%;
+    padding: 0.8rem;
+    background: #e11d48;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+}
+
+.currency-result {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}

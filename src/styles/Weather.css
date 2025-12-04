@@ -1,0 +1,39 @@
+.weather-container {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+}
+
+.weather-input {
+    width: 80%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: none;
+    margin-right: 0.5rem;
+}
+
+.weather-search-btn {
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background: #3b82f6;
+    color: white;
+}
+
+.weather-icon {
+    width: 100px;
+    margin-top: 1rem;
+}
+
+.weather-info {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
