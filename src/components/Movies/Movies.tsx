@@ -73,7 +73,6 @@ const Movies: React.FC = () => {
                         <label
                             htmlFor="movie-search"
                             className="form-label"
-                            style={{ color: "#FFFFFF" }}
                         >
                             Название фильма
                         </label>

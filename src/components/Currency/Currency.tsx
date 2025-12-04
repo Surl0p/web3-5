@@ -83,7 +83,6 @@ const Currency: React.FC = () => {
                         <label
                             htmlFor="amount"
                             className="form-label"
-                            style={{ color: "#FFFFFF" }}
                         >
                             Сумма для конвертации
                         </label>
@@ -102,7 +101,6 @@ const Currency: React.FC = () => {
                             <label
                                 htmlFor="fromCurrency"
                                 className="form-label"
-                                style={{ color: "#FFFFFF" }}
                             >
                                 Из валюты
                             </label>
@@ -133,7 +131,6 @@ const Currency: React.FC = () => {
                             <label
                                 htmlFor="toCurrency"
                                 className="form-label"
-                                style={{ color: "#FFFFFF" }}
                             >
                                 В валюту
                             </label>

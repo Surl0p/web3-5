@@ -8,22 +8,28 @@
     --panel-strong: rgba(255, 255, 255, 0.1);
     --text: #e5e7eb;
     --text-muted: #9ca3af;
+    --text-secondary: #9ca3af;
     --accent: #60a5fa;
     --accent-2: #a855f7;
     --border: rgba(255, 255, 255, 0.08);
     --shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+    --header-bg: linear-gradient(180deg, rgba(13, 17, 31, 0.92) 0%, rgba(13, 17, 31, 0.6) 100%);
+    --footer-bg: linear-gradient(180deg, rgba(13, 17, 31, 0.9), rgba(13, 17, 31, 0.7));
 }
 
 [data-theme="light"] {
     --bg: #f5f7fb;
-    --panel: rgba(255, 255, 255, 0.95);
+    --panel: rgba(255, 255, 255, 0.92);
     --panel-strong: #ffffff;
     --text: #0f172a;
     --text-muted: #475569;
+    --text-secondary: #475569;
     --accent: #2563eb;
     --accent-2: #a855f7;
     --border: rgba(15, 23, 42, 0.08);
     --shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+    --header-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 247, 251, 0.85) 100%);
+    --footer-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(245, 247, 251, 0.9));
 }
 
 *,
